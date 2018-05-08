@@ -63,7 +63,7 @@ jobs:
           paths:
             - project
             - scripts
-  01-Login:
+  01-login:
     machine: true
     environment:
       - AUTH0_CFG: 01-Login/auth0-variables.js
@@ -82,7 +82,7 @@ workflows:
     jobs:
       - checkout:
           context: Quickstart SPA Test
-      - 01-Login:
+      - 01-login:
           context: Quickstart SPA Test
           requires:
             - checkout
