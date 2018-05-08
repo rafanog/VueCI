@@ -82,7 +82,7 @@ workflows:
     jobs:
       - checkout:
           context: Quickstart SPA Test
-      - 01-login:
+      - 01-Login:
           context: Quickstart SPA Test
           requires:
             - checkout
