@@ -86,19 +86,7 @@ workflows:
           context: Quickstart SPA Test
           requires:
             - checkout
-      - 02-user-profile:
-          context: Quickstart SPA Test
-          requires:
-            - checkout
-      - 03-calling-an-api:
-          context: Quickstart SPA Test
-          requires:
-            - checkout
-      - 04-authorization:
-          context: Quickstart SPA Test
-          requires:
-            - checkout
-      - 05-token-renewal:
-          context: Quickstart SPA Test
-          requires:
-            - checkout
+     # - 05-autorization:
+     #     context: Quickstart SPA Test
+     #     requires:
+     #       - checkout
