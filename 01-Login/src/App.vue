@@ -11,16 +11,16 @@
           </router-link>
 
           <button
-            id="qsLoginBtn"
             class="btn btn-primary btn-margin"
+            id="qsLoginBtn"
             v-if="!authenticated"
             @click="login()">
               Log In
           </button>
 
           <button
-            id="qsLogoutBtn"
             class="btn btn-primary btn-margin"
+            id="qsLogoutBtn"
             v-if="authenticated"
             @click="logout()">
               Log Out
