@@ -2,12 +2,6 @@
 # AUTH0_TEST_CLIENT_ID = Client id to use in test
 # AUTH0_TEST_DOMAIN = Domain to use in test
 # AUTH0_TEST_API_IDENTIFIER = API Audience to use in test
-# export const AUTH_CONFIG = {
-#  clientId: '{CLIENT_ID}',
-#  domain: '{DOMAIN}',
-#  callbackUrl: 'http://localhost:3000/callback',
-#  apiUrl: '{API_IDENTIFIER}'
-#}
 
 # Common logic
 defaults: &defaults
@@ -23,11 +17,6 @@ defaults: &defaults
             echo "  callbackUrl: 'http://localhost:3000/callback'," >> $AUTH0_CFG
             echo "  apiUrl: '$AUTH0_TEST_AUDIENCE'" >> $AUTH0_CFG
             echo "}" >> $AUTH0_CFG
-          # echo "var AUTH0_CLIENT_ID='$AUTH0_TEST_CLIENT_ID';" >> $AUTH0_CFG
-          # echo "var AUTH0_DOMAIN='$AUTH0_TEST_DOMAIN';" >> $AUTH0_CFG
-          # echo "var AUTH0_AUDIENCE='$AUTH0_TEST_AUDIENCE';" >> $AUTH0_CFG
-          # echo "var AUTH0_CALLBACK_URL=location.href;" >> $AUTH0_CFG
-          
       - run:
           name: Build pull request
           command: |
@@ -72,7 +61,7 @@ jobs:
   01-login:
     machine: true
     environment:
-      - AUTH0_CFG: 01-Login/auth0-variables.js
+      - AUTH0_CFG: 01-Login/src/auth/auth0-variables.js
       - SAMPLE_PATH: 01-Login
     <<: *defaults
   05-Authorization:
